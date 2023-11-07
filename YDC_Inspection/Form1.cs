@@ -55,10 +55,10 @@ namespace YDC_Inspection
         {
             if (button2.BackColor == Color.LightGray)
             {
-
+                //dmasasc
                 mcPro.Open();
                 timer2.Enabled = true;
-                timer2.Interval = 100;
+                timer2.Interval = 10;
                 timer1.Enabled = true;
                 button2.BackColor = Color.Lime;
                 lbConnect.Text = "Connected";
@@ -233,7 +233,6 @@ namespace YDC_Inspection
                     case CogToolResultConstants.Accept:
                         string filename = System.String.Format(imgOk + "\\{0}.bmp", lbCode.Text);
                         re.Save(filename, ImageFormat.Bmp);
-                       
                         ReOk++;
                         lbResult.Text = "OK";
                         lbResult.BackColor = Color.Lime;
@@ -271,11 +270,6 @@ namespace YDC_Inspection
                 //iData1[0] = 1;
                 //mcPro.WriteDeviceBlock("D303", 1, iData1);
             }
-         
-
-           
-
-            
                 double ok1 = (ReOk / ReAll) * 100;
                 double ng1 = (ReNG / ReAll) * 100;
                 string ok = Math.Round(ok1, 2).ToString();
@@ -283,7 +277,7 @@ namespace YDC_Inspection
                 numAll.Text = ReAll.ToString();
                 numOk.Text = ReOk.ToString() + "(" + ok + "%)";
                 numNg.Text = ReNG.ToString() + "(" + ng + "%)";
-
+            var dicas = 0;
 
             
         }
